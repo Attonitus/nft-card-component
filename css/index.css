@@ -1,0 +1,127 @@
+@import './icon.css';
+
+:root {
+    --outfit: 'Outfit', sans-serif;
+    --outfit300: 300 1.25rem/1.5rem var(--outfit);
+    --outfit400: 1.25rem/1.75rem var(--outfit);
+    --outfit600: 600 1.75rem/1.85rem var(--outfit);
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white:  hsl(0, 0%, 100%);
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+}
+
+i {
+    margin: .3rem;
+}
+
+body {
+    margin: 0;
+    background-color: var(--mainBG);
+
+    block-size: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.main {
+    max-inline-size: 20rem;
+    margin: 0 auto;
+    background-color: var(--cardBG);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    block-size: 100%;
+    inline-size: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--cyan);
+    background-image: url(../icon/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border-radius: .5rem;
+    
+}
+
+.container:hover .overlay {
+    opacity: 0.5;
+  }
+
+
+.nft {
+    border-radius: .5rem;
+    inline-size: 100%;
+}
+
+
+
+.main h1 {
+    font: var(--outfit600);
+    color: var(--white);
+}
+
+.main h1:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.main p {
+    font: var(--outfit300);
+    color: var(--softBlue);
+}
+
+.infoCrypto {
+    font: var(--outfit400);
+    color: var(--cyan);
+}
+
+.infoTime {
+    font: var(--outfit300);
+    color: var(--softBlue);
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding-block-end: 1.5rem;
+    border-block-end: 1px solid var(--softBlue);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    padding-block-start: 1rem;
+}
+
+.user img {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-inline-end: 1rem;
+}
+
+.user span {
+    font: var(--outfit300);
+    color: var(--softBlue);
+}
+
+#nameUser {
+    color: var(--white);
+    margin-inline-start: .3rem;
+}
+
+#nameUser:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
